@@ -46,13 +46,9 @@ def main():
         probability = get_prediction_proba(raw_text)
 
         with col1:
-            # st.success("Original Text")
-            # st.write(raw_text)
             confidence = f"{np.max(probability)*100:.2f}%"
             st.subheader(f"Prediction: {str.capitalize(prediction)} ({confidence})")
             st.image(gif_dict[prediction])
-            # emoji_icon = emotions_emoji_dict[prediction]
-            # st.write("{}:{}".format(prediction, emoji_icon))
             
         with col2:
             st.subheader("Prediction Probability")
