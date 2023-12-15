@@ -28,8 +28,6 @@ def predict_emotion(text):
     # predicted = class_dict[output.argmax(axis=1)[0]]
     return predicted, output
 
-# emotions_emoji_dict
-
 def main():
     st.title("Emotion Classifier")
     st.subheader("Classify emotion in text")
