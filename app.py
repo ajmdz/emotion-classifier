@@ -8,10 +8,10 @@ import joblib
 import pickle
 
 # Load tokenizer and pre-trained model
-with open("tokenizer.pkl", "rb") as file:
+with open("./model/tokenizer.pkl", "rb") as file:
     tokenizer = pickle.load(file)
 
-model = tf.keras.models.load_model("model.h5")
+model = tf.keras.models.load_model("./model/model.h5")
 
 # Dictionary to map class indices to emotions
 class_dict = {0: 'fear', 1: 'sadness', 2: 'anger', 3: 'joy'}
